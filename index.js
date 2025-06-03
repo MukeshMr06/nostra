@@ -2,7 +2,7 @@ var navebar = document.getElementById("navebar")
 var closenav = document.getElementById("close")
 
 closenav.addEventListener("click",function(){
-    navebar.style.marginTop="-25px"
+    navebar.style.marginTop="-35px"
 })
 
 // header section

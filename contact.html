@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="bg-black text-white text-center transition-all duration-1000" id="navebar">
+        <div class="flex justify-center gap-10 md:text-2xl">
+            <h1>Sign Up and GET 20% OFF for your first order</h1>
+            <div>
+                <p class="cursor-pointer" id="close">X</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header section -->
+
+    <div class="flex justify-between mt-2 mx-[10px] sticky top-0 z-20 bg-white">
+        <h1 class="font-bold text-2xl">Nostra</h1>
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            id="menu" class="size-6 md:hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+
+        <ul class="flex gap-10 hidden md:flex text-grey-200">
+            <li>
+                <a class="cursor-pointer hover:underline" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="cursor-pointer hover:underline" href="">New Arrival</a>
+            </li>
+            <li>
+                <a class="cursor-pointer hover:underline" href="">Most Wanted</a>
+            </li>
+            <li>
+                <a class="cursor-pointer hover:underline" href="collection.html">Collection</a>
+            </li>
+            <li>
+                <a class="cursor-pointer hover:underline" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- side navebar -->
+
+    <div id="sidenav" class="bg-black text-white fixed top-0 transition-all duration-500 z-20"
+        style="width: 40%;height: 100vh; left: -40%;">
+        <div class="text-right p-5 cursor-pointer">
+            <p id="closenav">X</p>
+        </div>
+        <ul class="flex flex-col items-center gap-10  md:flex text-grey-200">
+            <li>
+                <a class="cursor-pointer hover:underline" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="cursor-pointer hover:underline" href="#new-arrival">New Arrival</a>
+            </li>
+            <li>
+                <a class="cursor-pointer hover:underline" href="#mostwanted">Most Wanted</a>
+            </li>
+            <li>
+                <a class="cursor-pointer hover:underline" href="collection.html">Collection</a>
+            </li>
+             <li>
+                <a class="cursor-pointer hover:underline" href="contact.html">Contact us</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- contact form -->
+
+    <div class="flex justify-center">
+        <section class="bg-gray-800 text-white rounded-xl mt-5 w-[400px] md:w-[600px] h-[450px] ">
+            <div class="mx-5 mt-5 gap-5">
+                <h1>Contact us</h1>
+                <table class="mt-5">
+                    <tr>
+                        <td>Name :</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                <input type="text" class="mt-2 rounded-xl w-[300px]  md:w-[500px] h-[50px]">
+                            </label>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>E-mail :</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                <input type="text"
+                                    class="mt-2 rounded-xl w-[300px] md:mt-2 rounded-xl md:w-[500px] h-[50px]">
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Message :</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>
+                                <input type="text" class="mt-2 rounded-xl w-[300px] md:w-[500px] h-[100px]">
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <button class=" bg-blue-900 mt-5 p-2 py-1 rounded-xl">submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+
+
+
+    </div>
+
+     <!-- news letter -->
+        <section class="text-center">
+            <h1 class="font-bold text-3xl mt-5">Join our news letter</h1>
+            <P class="text-2xl">Sign up for email newspaper to get exculsive discounts, updates and more</P>
+            <input class="border border-black p-3 m-4" style="width: 80%; " type="text"><br>
+            <section class="flex justify-center cursor-pointer">
+                <section class="flex items-center rounded-xl justify-center bg-black w-48 text-white p-2 py-1 gap-2">
+                    <button>subscribe</button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-8">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                    </svg>
+                </section>
+            </section>
+        </section>
+
+    <!-- Footer section -->
+    <div class="bg-green-600 text-white mt-10">
+        <div class="flex flex-col gap-5 mx-10 text-2xl">
+            <h1 class="font-bold mt-5">Nostra</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus recusandae sapiente, voluptate eos</p>
+            <div class="w-10 flex gap-10">
+                <img src="./images/facebook.png" alt="">
+                <img src="./images/instagram.png" alt="">
+                <img src="./images/twitter.png" alt="">
+            </div>
+            <p>@2025 Nostram.com</p>
+        </div>
+    </div>
+
+
+    <script src="contact.js"></script>
+</body>
