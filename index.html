@@ -78,37 +78,50 @@
     <!-- Image section -->
     <div class="mx-2 md:mx-10">
 
-        <div class=" w-full mt-2 relative">
-            <img class="w-[1500px] rounded-xl relative" src="./images/2.jpg" alt="">
+        <div class=" w-full mt-2 relative mt-5">
+            <ul id="slider">
+                <li>
+                    <img class="w-[1500px] rounded-xl object-cover" src="./images/1.jpg" alt="" loading="lazy">
+                </li>
+                <li>
+                    <img class="w-[1500px] rounded-xl object-cover" src="./images/2.jpg" alt="" loading="lazy">
+                </li>
+                <li>
+                    <img class="w-[1500px] rounded-xl object-cover" src="./images/3.jpg" alt="" loading="lazy">
+                </li>
+            </ul>
+
 
             <div class="absolute top-6 mt-6 md:top-40 w-full text-white">
                 <div class="flex justify-between w-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="w-10 h-10 cursor-pointer">
-                        <path fill-rule="evenodd"
-                            d="M10.72 11.47a.75.75 0 0 0 0 1.06l7.5 7.5a.75.75 0 1 0 1.06-1.06L12.31 12l6.97-6.97a.75.75 0 0 0-1.06-1.06l-7.5 7.5Z"
-                            clip-rule="evenodd" />
-                        <path fill-rule="evenodd"
-                            d="M4.72 11.47a.75.75 0 0 0 0 1.06l7.5 7.5a.75.75 0 1 0 1.06-1.06L6.31 12l6.97-6.97a.75.75 0 0 0-1.06-1.06l-7.5 7.5Z"
-                            clip-rule="evenodd" />
-                    </svg>
-
+                    <button onclick="prev()">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-10 h-10 cursor-pointer">
+                            <path fill-rule="evenodd"
+                                d="M10.72 11.47a.75.75 0 0 0 0 1.06l7.5 7.5a.75.75 0 1 0 1.06-1.06L12.31 12l6.97-6.97a.75.75 0 0 0-1.06-1.06l-7.5 7.5Z"
+                                clip-rule="evenodd" />
+                            <path fill-rule="evenodd"
+                                d="M4.72 11.47a.75.75 0 0 0 0 1.06l7.5 7.5a.75.75 0 1 0 1.06-1.06L6.31 12l6.97-6.97a.75.75 0 0 0-1.06-1.06l-7.5 7.5Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
                     <div class="text-center">
                         <h1 class="md:text-5xl font-bold">Level up Your style with our</h1>
                         <p class="font-bold mt-2">Summer collection</p>
                         <button class="bg-white text-black p-2 py-1 mt-2">Shop now</button>
                     </div>
 
-
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                        class="w-10 h-10 cursor-pointer">
-                        <path fill-rule="evenodd"
-                            d="M13.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L11.69 12 4.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                            clip-rule="evenodd" />
-                        <path fill-rule="evenodd"
-                            d="M19.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                            clip-rule="evenodd" />
-                    </svg>
+                    <button onclick="next()">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-10 h-10 cursor-pointer">
+                            <path fill-rule="evenodd"
+                                d="M13.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L11.69 12 4.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                                clip-rule="evenodd" />
+                            <path fill-rule="evenodd"
+                                d="M19.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -189,27 +202,27 @@
             <div class=" grid grid-cols-2 gap-2 md:grid-cols-4 mt-10">
                 <div class="w-56 relative">
                     <img src="./images/arrival1.jpg" alt="">
-                    <div class="top-0 w-full h-full absolute" style="background-color: black; opacity: 0.2;"> 
+                    <div class="top-0 w-full h-full absolute" style="background-color: black; opacity: 0.2;">
                     </div>
-                   <button class="top-32 left-16 bg-white p-2 py-1 rounded-xl absolute">shop now</button>
+                    <button class="top-32 left-16 bg-white p-2 py-1 rounded-xl absolute">shop now</button>
                 </div>
-               <div class="w-56 relative">
+                <div class="w-56 relative">
                     <img src="./images/arrival2.jpg" alt="">
-                    <div class="top-0 w-full h-full absolute" style="background-color: black; opacity: 0.2;"> 
+                    <div class="top-0 w-full h-full absolute" style="background-color: black; opacity: 0.2;">
                     </div>
-                   <button class="top-32 left-16 bg-white p-2 py-1 rounded-xl absolute">shop now</button>
+                    <button class="top-32 left-16 bg-white p-2 py-1 rounded-xl absolute">shop now</button>
                 </div>
                 <div class="w-56 relative">
                     <img src="./images/arrival3.jpg" alt="">
-                    <div class="top-0 w-full h-full absolute" style="background-color: black; opacity: 0.2;"> 
+                    <div class="top-0 w-full h-full absolute" style="background-color: black; opacity: 0.2;">
                     </div>
-                   <button class="top-32 left-16 bg-white p-2 py-1 rounded-xl absolute">shop now</button>
+                    <button class="top-32 left-16 bg-white p-2 py-1 rounded-xl absolute">shop now</button>
                 </div>
-              <div class="w-56 relative">
+                <div class="w-56 relative">
                     <img src="./images/arrival4.jpg" alt="">
-                    <div class="top-0 w-full h-full absolute" style="background-color: black; opacity: 0.2;"> 
+                    <div class="top-0 w-full h-full absolute" style="background-color: black; opacity: 0.2;">
                     </div>
-                   <button class="top-32 left-16 bg-white p-2 py-1 rounded-xl absolute">shop now</button>
+                    <button class="top-32 left-16 bg-white p-2 py-1 rounded-xl absolute">shop now</button>
                 </div>
             </div>
         </div>

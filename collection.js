@@ -43,8 +43,12 @@ search.addEventListener("keyup", function () {
 var check = document.getElementsByName("check")
 var result = document.getElementById('result')
 dress = []
-check[0].addEventListener("click",function(){
-    if(check[0].checked){
+
+for(count=0;count<check.length;count=count+1){
+
+
+check[count].addEventListener("click",function(){
+    if(event.target.checked){
         console.log("checked")
         dress.push(event.target.value)
         result.textContent = dress
@@ -56,3 +60,5 @@ check[0].addEventListener("click",function(){
         result.textContent=dress
     }
 })
+
+}
