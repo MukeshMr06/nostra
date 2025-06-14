@@ -5,6 +5,13 @@ closenav.addEventListener("click", function () {
     navebar.style.marginTop = "-35px"
 })
 
+//selecting heart
+// var one = document.querySelector(".heart")
+//  one.addEventListener("click", function () {
+//     one.style.color = "red"
+// })
+
+
 // header section
 
 var sidenav = document.getElementById("sidenav")
@@ -45,29 +52,29 @@ function next() {
     showslide()
 }
 
-function showslide(){
+function showslide() {
     var slides = document.getElementById("slider").getElementsByTagName("li")
 
-    for(var i=0;i<totalslide;i++){
-        if(currentslide == i+1){
+    for (var i = 0; i < totalslide; i++) {
+        if (currentslide == i + 1) {
             slides[i].classList.remove("hidden")
         }
-        else{
+        else {
             slides[i].classList.add("hidden")
         }
     }
 }
 
-function starscroll(){
-    interval = setInterval(()=>{
+function starscroll() {
+    interval = setInterval(() => {
         next()
-    },2500)
+    }, 2500)
 }
 
-function stopscroll(){
+function stopscroll() {
     clearInterval(interval)
 }
 
-window.onload = ()=>{
+window.onload = () => {
     starscroll()
 }

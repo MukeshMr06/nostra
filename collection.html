@@ -67,106 +67,90 @@
             <li>
                 <a class="cursor-pointer hover:underline" href="collection.html">Collection</a>
             </li>
-             <li>
+            <li>
                 <a class="cursor-pointer hover:underline" href="contact.html">Contact us</a>
             </li>
         </ul>
     </div>
 
-    <!-- side section -->
-    <div class="flex justify-between mt-10">
-        <div class=>
-            <div class="flex flex-col gap-5 text-xl font-semibold mx-5">
-                <div class="flex flex-col gap-5">
-                    <h2 class="font-bold">Category</h2>
-                    <label><input type="checkbox" id="summercheckbox" onchange="filterdress()" name="check" value="summer"> Summer</label>
-                    <label><input type="checkbox" id="partycheckbox" onchange="filterdress()" name="check" value="party"> Party</label>
-                    <label><input type="checkbox" name="check" value="beach"> Beach</label>
-                </div>
-                <div class="flex flex-col gap-5">
-                    <h2 class="font-bold">Color</h2>
-                    <label><input type="checkbox"name="check" value="red"> Red</label>
-                    <label><input type="checkbox"> Yellow</label>
-                    <label><input type="checkbox"> Green</label>
-                    <label><input type="checkbox"> White</label>
-                </div>
-                <div class="flex flex-col gap-5">
-                    <h2 class="font-bold">Arrivals</h2>
-                    <label><input type="checkbox"> Old</label>
-                    <label><input type="checkbox"> New</label>
-                </div>
+    <!-- side nav checkbox -->
+    <div class="flex ">
+        <div class="border-r-2 border-black">
+            <div class=" w-[25vw] md:w-[20vw] h-[100vh]  flex-1">
+
+                <h2 class="text-sm font-extrabold mt-5 md:text-xl md:p-5 lg:text-2xl">Category</h2>
+                <label class="block  p-2 font-semibold text-xs md:text-2xl "><input type="checkbox" id="summerCheckbox"
+                        onchange="filterDresses()"> Summer</label>
+                <label class="block p-2 font-semibold text-xs md:text-2xl"><input type="checkbox" id="beachCheckbox"
+                        onchange="filterDresses()"> Beach</label>
+                <label class="block p-2 font-semibold text-xs md:text-2xl"><input type="checkbox" id="partyCheckbox"
+                        onchange="filterDresses()"> Party</label>
+
+
+                <h2 class="text-sm font-extrabold mt-5 md:text-xl md:p-5 lg:text-2xl">Color</h2>
+                <label class="block  p-2 font-semibold text-xs md:text-2xl"><input type="checkbox" id="redCheckbox"
+                        onchange="filterDresses()"> Red</label>
+                <label class="block p-2 font-semibold text-xs md:text-2xl"><input type="checkbox" id="yellowCheckbox"
+                        onchange="filterDresses()"> Yellow</label>
+                <label class="block p-2 font-semibold text-xs md:text-2xl"><input type="checkbox" id="greenCheckbox"
+                        onchange="filterDresses()"> Green</label>
+                <label class="block p-2 font-semibold text-xs md:text-2xl"><input type="checkbox" id="whiteCheckbox"
+                        onchange="filterDresses()"> White</label>
+
+                <h2 class="text-sm font-extrabold mt-5 md:text-xl md:p-5 lg:text-2xl">Arrivals</h2>
+                <label class="block p-2  font-semibold text-xs md:text-2xl"><input type="checkbox" id="newCheckbox"
+                        onchange="filterDresses()"> New</label>
+                <label class="block p-2 font-semibold text-xs md:text-2xl"><input type="checkbox" id="oldCheckbox"
+                        onchange="filterDresses()"> Old</label>
+
             </div>
         </div>
 
-        <!-- search section -->
-        <div class="mx-5">
-            <div class="border border-black rounded-xl md:w-[1000px]">
-                <div class="flex justify-between p-2 py-1 mx-2">
-                    <input type="text" id="search" class="outline-none w-full rounded-xl" placeholder="search">
-                    <img class="w-5" src="./images/search.png" alt="">
-                </div>
-            </div>
-            <h1 id="result"></h1>
+        <!-- collection list  -->
 
-            <!-- image section -->
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-5 mt-5" id="image-container">
-                <div class="w-30 md:w-60">
-                    <img  src="./images/arrival1.jpg" alt="">
-                    <h1 class="font-semibold">Summer shirt</h1>
-                    <p class="text-green-600">$850</p>
-                </div>
-                <div class="w-30 md:w-60">
-                    <img src="./images/f5.jpg" alt="">
-                    <h1 class="font-semibold">Beach shirt</h1>
-                    <p class="text-green-600">$550</p>
-                </div>
-                <div class="w-30  md:w-60">
-                    <img src="./images/f8.jpg" alt="">
-                    <h1 class="font-semibold">Party shirt</h1>
-                    <p class="text-green-600">$950</p>
-                </div>
-                <div class="w-30  md:w-60">
-                    <img src="./images/f4.jpg" alt="">
-                    <h1 class="font-semibold">Summer shirt</h1>
-                    <p class="text-green-600">$450</p>
-                </div>
-                <div class="w-30 md:w-60">
-                    <img src="./images/arrival4.jpg" alt="">
-                    <h1 class="font-semibold">Party shirt</h1>
-                    <p class="text-green-600">$650</p>
-                </div>
-                <div class="w-30 md:w-60">
-                    <img src="./images/arrival3.jpg" alt="">
-                    <h1 class="font-semibold">Beach shirt</h1>
-                    <p class="text-green-600">$850</p>
+        <div class=" w-[70vw] md:w-[80vw] h-[100vh] flex-2 overflow-y-auto scroll">
+            <div class="flex  justify-between p-2  mx-5 border rounded-lg border-black sticky top-0 bg-white">
+
+
+                <input type="text" placeholder="search" id="searchInput" oninput="filterDresses()"
+                    class="w-full   bg-white outline-none ">
+                <img src="./images/search.png" class="w-6" loading="lazy">
+
+            </div>
+
+            <!-- Displayed Data Column -->
+            <div class="overflow-y-scroll z-0">
+                <div id="dressContainer" class="grid grid-cols-2 md:grid-cols-3">
+                    <img src=""> 
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- offer section -->
-    <div class="mx-5">
-        <div class="bg-blue-900 w-full mt-5 flex">
-            <div class="w-[300px] my-3">
-                <img class="h-[200px] mx-10" src="./images/1.jpg" alt="">
-            </div>
-            <div class="ml-20 md:ml-20 text-white w-[500px] flex flex-col gap-5 mt-5">
-                <h1 class="md:text-5xl">Limited Offer</h1>
-                <p class="md:text-3xl">35% OFF on this for the first 30 customers</p>
-                <div class="flex gap-2 bg-white text-black w-fit p-2 py-1 cursor-pointer">
-                    <h1>Shop now</h1>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-                    </svg>
+    <!-- Offer section -->
+
+        <div class="bg-gray-800 w-full h-[300px] mt-24 flex">
+            <div class="flex mt-10">
+                <img class="w-[50%] h-[55%]  md:h-[80%] w-[70%] mx-10" src="./images/offer img.jpg" alt="">
+
+                <div class="flex flex-col gap-5 md:flex flex-col gap-5 text-white">
+                    <h1 class="font-bold md:text-5xl">Limited Offer</h1>
+                    <p class="md:text-3xl">35% OFF on this for the first 30 customers</p>
+                    <div class="flex gap-2 bg-white text-black w-fit p-2 py-1 cursor-pointer">
+                        <h1>Shop now</h1>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
 
     <!-- news letter -->
-        <section class="text-center">
+        <section class="text-center mt-20">
             <h1 class="font-bold text-3xl mt-5">Join our news letter</h1>
             <P class="text-2xl">Sign up for email newspaper to get exculsive discounts, updates and more</P>
             <input class="border border-black p-3 m-4" style="width: 80%; " type="text"><br>
@@ -182,12 +166,13 @@
             </section>
         </section>
 
+
     <!-- Footer section -->
-    <div class="bg-green-600 text-white mt-10">
+    <div class="bg-gray-600 text-white mt-20">
         <div class="flex flex-col gap-5 mx-10 text-2xl">
-            <h1 class="font-bold mt-5">Nostra</h1>
+            <h1 class="font-bold text-5xl mt-5">Nostra</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus recusandae sapiente, voluptate eos</p>
-            <div class="w-10 flex gap-10">
+            <div class="w-8 flex gap-10">
                 <img src="./images/facebook.png" alt="">
                 <img src="./images/instagram.png" alt="">
                 <img src="./images/twitter.png" alt="">
